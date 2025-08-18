@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { Spotlight } from "./ui/Spotlight"
 import { TextGenerateEffect } from "./ui/TextGenerateEffect"
 import MagicButton from "./ui/MagicButton"
-import { Navigation } from "lucide-react"
+import {  Rocket } from "lucide-react"
 
 const Hero = () => {
     return (
@@ -38,7 +38,7 @@ const Hero = () => {
                         <p className="text-center md:tracking-wider mb-3 text-sm md:text-lg lg:text-2xl">
                             Hi, I'am Nayim, a Frontend Focused Mern Stack Developer
                         </p>
-                        <MagicButton title="Show my work" icon={<Navigation size={24} />} position="right" />
+                        <MagicButton title="Show my work" icon={<Rocket size={16} />} position="right" />
                     </div>
                 </div>
             </div>
