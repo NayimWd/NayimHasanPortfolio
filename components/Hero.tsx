@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { Spotlight } from "./ui/Spotlight"
 import { TextGenerateEffect } from "./ui/TextGenerateEffect"
 import MagicButton from "./ui/MagicButton"
-import {  Rocket } from "lucide-react"
+import {  Download, Rocket } from "lucide-react"
 
 const Hero = () => {
     return (
@@ -31,14 +31,17 @@ const Hero = () => {
                         </h2>
                         <TextGenerateEffect
                             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                            words="Transforming Concepts into Seamless Experiences"
+                            words="Crafting Dynamic Web Apps with Precision & Passion"
                             duration={2}
                             filter={false}
                         />
                         <p className="text-center md:tracking-wider mb-3 text-sm md:text-lg lg:text-2xl">
-                            Hi, I'am Nayim, a Frontend Focused Mern Stack Developer
+                            Hi, I’m Naim — I build modern web apps using React, Next.js, and the MERN stack with a strong focus on frontend architecture and user experience.
                         </p>
-                        <MagicButton title="Show my work" icon={<Rocket size={16} />} position="right" />
+                        <div className="flex justify-center gap-4 flex-wrap sm:flex-nowrap">
+                        <MagicButton title="Download Resume" icon={<Rocket size={16} />} position="right" />
+                        <MagicButton title="Explore Portfolio" icon={<Download size={16} />} position="right" />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,6 @@
 import Hero from "@/components/Hero";
+import Grid from "@/components/ui/grid/Grid";
 import NavMenu from "@/components/ui/NavMenu";
-
-
-
 
 export default function Home() {
   return (
@@ -10,6 +8,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
          <NavMenu/>
           <Hero/>
+          <Grid/>
       </div>
     </main>
   );

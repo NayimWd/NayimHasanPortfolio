@@ -13,12 +13,9 @@ import {
 } from "@/components/ui/Navbar";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { navItems } from "@/data";
+import { div } from "motion/react-client";
 
-const navItems = [
-  { name: "Features", link: "#features" },
-  { name: "Pricing", link: "#pricing" },
-  { name: "Contact", link: "#contact" },
-];
 
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +47,7 @@ export default function NavMenu() {
   }, [isOpen]);
 
   return (
+    <div className="relative">
     <Navbar
       className={cn(
         "transition-all duration-300",
@@ -101,5 +99,6 @@ export default function NavMenu() {
         </MobileNavMenu>
       </MobileNav>
     </Navbar>
+    </div>
   );
 }
