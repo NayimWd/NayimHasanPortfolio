@@ -14,7 +14,6 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { navItems } from "@/data";
-import { div } from "motion/react-client";
 
 
 export default function NavMenu() {
@@ -24,7 +23,7 @@ export default function NavMenu() {
 
   // Sticky effect
   useEffect(() => {
-    const handleScroll = () => setIsSticky(window.scrollY > 200);
+    const handleScroll = () => setIsSticky(window.scrollY > 400);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
