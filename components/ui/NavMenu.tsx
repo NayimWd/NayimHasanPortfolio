@@ -51,7 +51,7 @@ export default function NavMenu() {
       className={cn(
         "transition-all duration-300",
         (isSticky || isOpen)
-          ? "fixed top-0 left-0 w-full bg-black-100 shadow-lg z-50"
+          ? "fixed top-0 left-0 w-full bg-black-100 shadow-lg z-[9999]"
           : "relative bg-transparent"
       )}
     >

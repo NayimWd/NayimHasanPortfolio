@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import Grid from "@/components/ui/grid/Grid";
 import NavMenu from "@/components/ui/NavMenu";
 
@@ -9,6 +10,7 @@ export default function Home() {
          <NavMenu/>
           <Hero/>
           <Grid/>
+          <Projects/>
       </div>
     </main>
   );
