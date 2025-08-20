@@ -75,7 +75,7 @@ export default function NavMenu() {
         </MobileNavHeader>
 
         <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
-          <div ref={menuRef} className="flex flex-col space-y-4 p-4 bg-black-100">
+          <div ref={menuRef} className="relative flex flex-col space-y-4 p-4 bg-black-100">
             {navItems.map((item) => (
               <a
                 key={item.name}
