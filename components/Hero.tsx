@@ -39,8 +39,8 @@ const Hero = () => {
                             Hi, I’m Naim — I build modern web apps using React, Next.js, and the MERN stack with a strong focus on frontend architecture and user experience.
                         </p>
                         <div className="flex justify-center gap-4 flex-wrap sm:flex-nowrap">
-                        <MagicButton title="Download Resume" icon={<Rocket size={16} />} position="right" />
-                        <MagicButton title="Explore Portfolio" icon={<Download size={16} />} position="right" />
+                        <MagicButton title="Download Resume" icon={<Download size={16} className="text-green-500" />} position="right" />
+                        <MagicButton title="Explore Portfolio" icon={<Rocket size={16} className="text-red-500"/>} position="right" />
                         </div>
                     </div>
                 </div>

@@ -46,7 +46,7 @@ export default function NavMenu() {
   }, [isOpen]);
 
   return (
-    <div className="relative">
+    <div className="relative -top-10">
     <Navbar
       className={cn(
         "transition-all duration-300",
