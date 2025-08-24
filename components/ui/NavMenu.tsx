@@ -46,11 +46,11 @@ export default function NavMenu() {
   }, [isOpen]);
 
   return (
-    <div className="relative -top-10">
+    <div className="relative -top-12">
     <Navbar
       className={cn(
         "transition-all duration-300",
-        (isSticky || isOpen)
+        (isSticky || isOpen)    
           ? "fixed top-0 left-0 w-full bg-black-100 shadow-lg z-[9999]"
           : "relative bg-transparent"
       )}

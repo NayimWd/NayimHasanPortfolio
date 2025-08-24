@@ -6,7 +6,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import { Copy } from "lucide-react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import { GlobeDemo } from "./Globe";
 
 type gridProps = {
@@ -52,19 +52,10 @@ export const BentoGridItem = ({
   spareImg,
 }: gridProps) => {
 
-  const leftLists = [ "",  "", "JavaScript", , "ReactJS" , "NextJS"];
+  const leftLists = ["", "", "JavaScript", , "ReactJS", "NextJS"];
   const rightLists = ["", "Express", "MongoDb", "TypeScript"];
 
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = () => {
     const text = "nayim.wd@gmail.com";
@@ -73,7 +64,7 @@ export const BentoGridItem = ({
   };
 
   return (
-     <div
+    <div
       className={cn(
         "row-span-1 relative overflow-hidden rounded-2xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
@@ -166,12 +157,19 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-             
+
               <div
                 className={`absolute -bottom-5 right-0 ${copied ? "" : "block"
                   }`}
-              >               
-                <Lottie options={defaultOptions} height={200} width={400} />
+              >
+                {copied && (
+                  <Lottie
+                    animationData={animationData}
+                    loop={false}
+                    autoplay={true}
+                    style={{ height: 200, width: 400 }}
+                  />
+                )}
               </div>
 
               <MagicButton
