@@ -1,3 +1,4 @@
+import Experiences from "@/components/Experiences";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Grid from "@/components/ui/grid/Grid";
@@ -11,6 +12,7 @@ export default function Home() {
           <Hero/>
           <Grid/>
           <Projects/>
+          <Experiences/>
       </div>
     </main>
   );

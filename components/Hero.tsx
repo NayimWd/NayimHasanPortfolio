@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { Spotlight } from "./ui/Spotlight"
 import { TextGenerateEffect } from "./ui/TextGenerateEffect"
 import MagicButton from "./ui/MagicButton"
-import {  Download, Rocket } from "lucide-react"
+import { Download, Rocket } from "lucide-react"
 
 const Hero = () => {
     return (
@@ -27,20 +27,22 @@ const Hero = () => {
                 <div className="flex justify-center absolute top-0 left-0 my-20 z-10 w-full">
                     <div className="max-w-[90vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center ">
                         <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80]">
-                            Dynamic Web Magic With Next.js
+                            Building Modern Web Experiences
                         </h2>
                         <TextGenerateEffect
                             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                            words="Crafting Dynamic Web Apps with Precision & Passion"
+                            words="Turning Ideas into Interactive User-Friendly Applications"
                             duration={2}
                             filter={false}
+                            length1={2}
+                            length2={5}
                         />
                         <p className="text-center md:tracking-wider mb-3 text-sm md:text-lg lg:text-2xl">
-                            Hi, I’m Naim — I build modern web apps using React, Next.js, and the MERN stack with a strong focus on frontend architecture and user experience.
+                            Hi, I'm Naim — I develop responsive web applications using React, Next.js, and the MERN stack, with a focus on creating intuitive user experiences and clean, maintainable code.
                         </p>
                         <div className="flex justify-center gap-4 flex-wrap sm:flex-nowrap">
-                        <MagicButton title="Download Resume" icon={<Download size={16} className="text-green-500" />} position="right" />
-                        <MagicButton title="Explore Portfolio" icon={<Rocket size={16} className="text-red-500"/>} position="right" />
+                            <MagicButton title="Download Resume" icon={<Download size={16} className="text-green-500" />} position="right" />
+                            <MagicButton title="Explore Portfolio" icon={<Rocket size={16} className="text-red-500" />} position="right" />
                         </div>
                     </div>
                 </div>

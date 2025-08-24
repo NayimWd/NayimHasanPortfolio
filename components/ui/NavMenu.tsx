@@ -47,57 +47,57 @@ export default function NavMenu() {
 
   return (
     <div className="relative -top-12">
-    <Navbar
-      className={cn(
-        "transition-all duration-300",
-        (isSticky || isOpen)    
-          ? "fixed top-0 left-0 w-full bg-black-100 shadow-lg z-[9999]"
-          : "relative bg-transparent"
-      )}
-    >
-      {/* Desktop Navbar */}
-      <NavBody>
-        <NavbarLogo />
-        <NavItems items={navItems} />
-        <NavbarButton href="#pricing" variant="primary">
-          Get Started
-        </NavbarButton>
-      </NavBody>
-
-      {/* Mobile Navbar */}
-      <MobileNav>
-        <MobileNavHeader>
+      <Navbar
+        className={cn(
+          "transition-all duration-300",
+          (isSticky || isOpen)
+            ? "fixed top-0 left-0 w-full bg-black-100 shadow-lg z-[9999]"
+            : "relative bg-transparent"
+        )}
+      >
+        {/* Desktop Navbar */}
+        <NavBody>
           <NavbarLogo />
-          <MobileNavToggle
-            isOpen={isOpen}
-            onClick={() => setIsOpen((prev) => !prev)}
-          />
-        </MobileNavHeader>
+          <NavItems items={navItems} />
+          <NavbarButton href="#pricing" variant="primary">
+            Get Started
+          </NavbarButton>
+        </NavBody>
 
-        <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
-          <div ref={menuRef} className="relative flex flex-col space-y-4 p-4 bg-black-100">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.link}
-                className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsOpen(false)} // close menu when clicking link
+        {/* Mobile Navbar */}
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isOpen}
+              onClick={() => setIsOpen((prev) => !prev)}
+            />
+          </MobileNavHeader>
+
+          <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
+            <div ref={menuRef} className="relative flex flex-col space-y-4 p-4 bg-black-100">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.link}
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                  onClick={() => setIsOpen(false)} // close menu when clicking link
+                >
+                  {item.name}
+                </a>
+              ))}
+
+              <NavbarButton
+                href="#pricing"
+                variant="primary"
+                onClick={() => setIsOpen(false)}
               >
-                {item.name}
-              </a>
-            ))}
-
-            <NavbarButton
-              href="#pricing"
-              variant="primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Get Started
-            </NavbarButton>
-          </div>
-        </MobileNavMenu>
-      </MobileNav>
-    </Navbar>
+                Get Started
+              </NavbarButton>
+            </div>
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
     </div>
   );
 }
