@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import logo from "@/public/nhLogo.svg";
 import {
     motion,
     AnimatePresence,
@@ -231,12 +232,11 @@ export const NavbarLogo = () => {
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
         >
             <img
-                src="https://assets.aceternity.com/logo-dark.png"
+                src="/nhLogo.svg"
                 alt="logo"
-                width={30}
-                height={30}
+                className="h-8 sm:h-9 w-auto"
+                loading="lazy"
             />
-            <span className="font-medium text-black dark:text-white">Startup</span>
         </a>
     );
 };
