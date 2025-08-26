@@ -1,10 +1,12 @@
 import { gridItems } from "@/data"
 import { BentoGrid, BentoGridItem } from "./BentoGrid"
+import { TextGenerateEffect } from "../TextGenerateEffect"
+import { Button } from "@/components/MovingBorders"
 
 const Grid = () => {
-    return (
-        <section  id="about">
-            <BentoGrid className="w-full py-20">
+  return (
+    <section id="about">
+      <BentoGrid className="w-full py-20">
         {gridItems.map((item) => (
           <BentoGridItem
             id={item.id}
@@ -21,8 +23,8 @@ const Grid = () => {
           />
         ))}
       </BentoGrid>
-        </section>
-    )
+    </section>
+  )
 }
 
 export default Grid
