@@ -6,7 +6,7 @@ import { Download, Rocket } from "lucide-react"
 
 const Hero = () => {
     return (
-        <div className="pb-20 pt-36">
+        <div className="pb-12 sm:pb-0 md:pb-16 lg:pb-20 pt-24 md:pt-32">
             <div>
                 <Spotlight width={100} className="" />
             </div>

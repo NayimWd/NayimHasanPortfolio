@@ -82,4 +82,10 @@
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
+
+  .paddingY {
+    @apply py-10 sm:py-12 md:py-16 lg:py-20;
+  }
 }
+
+

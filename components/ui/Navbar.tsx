@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import logo from "@/public/nhLogo.svg";
+
 import {
     motion,
     AnimatePresence,
