@@ -1,3 +1,20 @@
+import javaScript from "@/public/javascript.svg";
+import typeScript from "@/public/typescript.svg";
+import react from "@/public/react.svg";
+import next from "@/public/nextjs.svg";
+import redux from "@/public/redux.svg";
+import tailwind from "@/public/tailwindcss.svg";
+import node from "@/public/node-js.svg";
+import express from "@/public/express.svg";
+import mongodb from "@/public/mongodb.svg";
+import mongoose from "@/public/mongoose.svg";
+import postman from "@/public/postman.svg";
+import redis from "@/public/redis.svg";
+import vsCode from "@/public/code.svg";
+import git from "@/public/github.svg";
+import jwt from "@/public/jwt.svg";
+import docker from "@/public/docker.svg";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Skills", link: "#skills" },
@@ -9,7 +26,8 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I'm passionate about creating user-friendly interfaces and clean, maintainable code",
+    title:
+      "I'm passionate about creating user-friendly interfaces and clean, maintainable code",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -39,7 +57,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Eager to learn and grow as a developer while contributing to meaningful projects",
+    title:
+      "Eager to learn and grow as a developer while contributing to meaningful projects",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -50,7 +69,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building projects with \n React & Next.js to strengthen my skills",
+    title:
+      "Currently building projects with \n React & Next.js to strengthen my skills",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -60,7 +80,8 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Looking for opportunities to contribute and learn? \n Let's connect!",
+    title:
+      "Looking for opportunities to contribute and learn? \n Let's connect!",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -189,7 +210,7 @@ export const workExperience = [
     title: "Backend-Focused Training",
     subTitle: "Intermediate Bootcamp (2023)",
     desc: "Strengthened the backend side of MERN stack, mastering Node.js, Express, and MongoDB while building REST APIs and authentication systems.",
-    className: "md:col-span-2", 
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
@@ -197,7 +218,7 @@ export const workExperience = [
     title: "Independent Learning",
     subTitle: "Advanced Concepts (2024-Present)",
     desc: "Expanded MERN skills with TypeScript, Next.js, Redux Toolkit, and advanced React patterns through hands-on project building.",
-    className: "md:col-span-2", 
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
@@ -209,6 +230,90 @@ export const workExperience = [
     thumbnail: "/exp4.svg",
   },
 ];
+
+export const skills = [
+  {
+    id: 1,
+    name: "JavaScript",
+    img: javaScript,
+  },
+  {
+    id: 2,
+    name: "TypeScript",
+    img: typeScript,
+  },
+  {
+    id: 3,
+    name: "React",
+    img: react,
+  },
+  {
+    id: 4,
+    name: "Next",
+    img: next,
+  },
+  {
+    id: 5,
+    name: "Redux Toolkit",
+    img: redux,
+  },
+  {
+    id: 6,
+    name: "Tailwind",
+    img: tailwind,
+  },
+  {
+    id: 7,
+    name: "Nodejs",
+    img: node,
+  },
+  {
+    id: 8,
+    name: "Express",
+    img: express,
+  },
+  {
+    id: 9,
+    name: "MongoDB",
+    img: mongodb,
+  },
+  {
+    id: 10,
+    name: "mongoose",
+    img: mongoose,
+  },
+  {
+    id: 11,
+    name: "Redis",
+    img: redis,
+  },
+  {
+    id: 13,
+    name: "JWT",
+    img: jwt,
+  },
+  {
+    id: 14,
+    name: "Postman",
+    img: postman,
+  },
+  {
+    id: 15,
+    name: "Git",
+    img: git,
+  },
+  {
+    id: 16,
+    name: "VS Code",
+    img: vsCode,
+  },
+  {
+    id: 17,
+    name: "Docker",
+    img: docker,
+  },
+];
+
 
 export const socialMedia = [
   {

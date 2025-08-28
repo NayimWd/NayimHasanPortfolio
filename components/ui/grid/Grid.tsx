@@ -6,7 +6,7 @@ import { Button } from "@/components/MovingBorders"
 const Grid = () => {
   return (
     <section id="about">
-      <BentoGrid className="w-full py-20">
+      <BentoGrid className="w-full pb-20">
         {gridItems.map((item) => (
           <BentoGridItem
             id={item.id}
