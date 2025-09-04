@@ -41,8 +41,8 @@ const Hero = () => {
                             Hi, I'm Naim — I develop responsive web applications using React, Next.js, and the MERN stack, with a focus on creating intuitive user experiences and clean, maintainable code.
                         </p>
                         <div className="flex justify-center gap-4 flex-wrap sm:flex-nowrap">
-                            <MagicButton title="Download Resume" icon={<Download size={16} className="text-green-500" />} position="right" />
-                            <MagicButton title="Explore Portfolio" icon={<Rocket size={16} className="text-red-500" />} position="right" />
+                            <MagicButton title="Download Resume" icon={<Download size={16} className="text-green-500 animate-bounce" />} position="right" />
+                            <MagicButton title="Explore Portfolio" icon={<Rocket size={16} className="text-red-500 animate-pulse" />} position="right" />
                         </div>
                     </div>
                 </div>

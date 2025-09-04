@@ -88,20 +88,31 @@ export const InfiniteMovingCards = ({
             >
                 {items.map((item, idx) => (
                     <li
-                        className="relative bg-slate-900/[0.8] backdrop-blur-xl w-[220px] max-w-full shrink-0 rounded-xl border border-slate-800 px-8 py-6"
-                        key={idx}>
-                        <blockquote>
-                            <div
-                                aria-hidden="true"
-                                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                            ></div>
-                            <div className="relative flex flex-col gap-3 items-center">
-                                <div>
-                                    <Image className="h-20 w-20 bg-white p-2 rounded-full object-cover object-center" src={item.img} alt="logo" loading="lazy" about="tools and technology" aria-label="tools logo" />
+                        key={idx}
+                        className="relative w-[200px] max-w-full shrink-0 rounded-2xl overflow-hidden group"
+                    >
+                        {/* Moving border effect wrapper */}
+                        <div className="relative p-[1px] rounded-2xl bg-transparent">
+                            <div className="relative flex flex-col items-center gap-3 rounded-2xl border border-slate-800 bg-slate-900/[0.8] backdrop-blur-xl px-6 py-6 shadow-md group-hover:shadow-lg transition hover:scale-[1.03]">
+
+                                {/* Logo wrapper */}
+                                <div className="relative h-20 w-20 flex items-center justify-center rounded-full bg-white/10 border border-white/20 shadow-inner group-hover:bg-primary/20 transition">
+                                    <Image
+                                        src={item.img}
+                                        alt={item.name || "logo"}
+                                        className="h-12 w-12 object-contain"
+                                        loading="lazy"
+                                    />
                                 </div>
-                                <p className="text-white-100 text-sm font-semibold leading-[1.6]"> {item.name ? item.name : ""} </p>
+
+                                {/* Tool name */}
+                                {item.name && (
+                                    <p className="text-white/90 text-sm font-semibold tracking-wide group-hover:text-primary transition">
+                                        {item.name}
+                                    </p>
+                                )}
                             </div>
-                        </blockquote>
+                        </div>
                     </li>
                 ))}
             </ul>

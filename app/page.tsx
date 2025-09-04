@@ -1,9 +1,11 @@
+import Contact from "@/components/Contact";
 import Experiences from "@/components/Experiences";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Grid from "@/components/ui/grid/Grid";
 import NavMenu from "@/components/ui/NavMenu";
+
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
           <Projects/>
           <Experiences/>
           <Skills/>
+          <Contact/>
       </div>
     </main>
   );

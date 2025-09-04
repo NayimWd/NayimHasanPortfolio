@@ -4,7 +4,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect"
 
 const Skills = () => {
   return (
-    <div className="w-full paddingY ">
+    <div id="skills" className="w-full paddingY ">
         <TextGenerateEffect
                 className='heading uppercase mb-10'
                 words={"Tech Stack & Tools"}
@@ -16,7 +16,7 @@ const Skills = () => {
 
         <InfiniteMovingCards
             items={skills}
-            direction="right"
+            direction="left"
             speed="fast"
         />
        
