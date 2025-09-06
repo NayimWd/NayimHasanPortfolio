@@ -59,8 +59,8 @@ export default function NavMenu() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <NavbarButton href="#pricing" variant="primary">
-            Get Started
+          <NavbarButton href="#contact" variant="primary">
+            Contact
           </NavbarButton>
         </NavBody>
 
@@ -88,11 +88,11 @@ export default function NavMenu() {
               ))}
 
               <NavbarButton
-                href="#pricing"
+                href="#contact"
                 variant="primary"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
+                Contact
               </NavbarButton>
             </div>
           </MobileNavMenu>

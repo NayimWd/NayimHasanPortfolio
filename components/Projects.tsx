@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
     return (
-        <div className="paddingY">
+        <div id="projects" className="paddingY">
             <h1 className="heading">
                 A small selection of my{' '}
                 <span className="text-purple"> recent projects </span>

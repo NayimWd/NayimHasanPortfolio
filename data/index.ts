@@ -17,10 +17,9 @@ import docker from "@/public/docker.svg";
 
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Skills", link: "#skills" },
   { name: "Projects", link: "#projects" },
+  { name: "Skills", link: "#skills" },
   { name: "Blog", link: "#blogs" },
-  { name: "Contact", link: "#contact" },
 ];
 
 export const gridItems = [

@@ -4,8 +4,11 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "./Provider";
 
 export const metadata: Metadata = {
-  title: "Nayim Hasan",
-  description: "Next.js + Tailwind v4.1",
+  title: "Nayim Hasan - portfolio",
+  description: "Learning journey",
+  icons: {
+    icon: "/nFicon.svg"
+  }
 };
 
 const inter = Inter({ subsets: ["latin"] });

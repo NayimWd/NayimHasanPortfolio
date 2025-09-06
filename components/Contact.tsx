@@ -6,7 +6,7 @@ const Contact = () => {
         <div id="contact" className="w-full paddingY relative">
             <div className="w-full absolute left-0 -bottom-20 py-20 min-h-96 ">
                 <img src="/footer-grid.svg" alt="grid-bg"
-                className="w-full h-full opacity-100"
+                className="w-full h-full opacity-60"
                 />
             </div>
             <div className="flex flex-col items-center">
