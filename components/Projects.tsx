@@ -1,6 +1,7 @@
 import { projects } from "@/data"
 import { PinContainer } from "./ui/project/Card3d";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const Projects = () => {
     return (
@@ -67,6 +68,14 @@ const Projects = () => {
                                             </p>
                                             <ExternalLink className="ms-3" color="#CBACF9" />
                                         </div>
+                                        <Link href={`/project/${id}`}>
+                                        <div className="flex justify-center items-center">
+                                            <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                                                View Details
+                                            </p>
+                                            <ExternalLink className="ms-3" color="#CBACF9" />
+                                        </div>
+                                        </Link>
                                     </div>
                                 </PinContainer>
                             </div>
