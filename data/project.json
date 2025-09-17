@@ -1,0 +1,130 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Unity Sports Club Dashboard",
+      "description": "A modern, responsive dashboard for sports club management with multi-role support, interactive tables, and full CRUD functionality.",
+      "longDescription": "A full-featured sports club management dashboard built with React, TypeScript, and Tailwind CSS. Supports Admin, Staff, Player, Manager, and Umpire roles with features like team & player management, tournaments, matches, results, blogs, and dynamic tables. Demonstrates advanced frontend development practices, reusable components, and optimized state management.",
+      "image": "/tempImg.jpg",
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Redux Toolkit", "Dashboard", "Responsive"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "category": "Web Development",
+      "year": "2025",
+      "duration": "2 months",
+      "client": "Personal Project",
+      "features": [
+        "Multi-role management (Admin, Staff, Player, Manager, Umpire) with CRUD operations",
+        "Dynamic tables with sorting, filtering, pagination, and responsive design",
+        "Reusable forms and modals with validation and rich text editor support",
+        "Theme switching (Light/Dark/System), loading skeletons, and error handling"
+      ],
+      "learnings": [
+        "Advanced React patterns (component composition, hooks, HOCs, custom hooks)",
+        "Performance optimization (code splitting, lazy loading, image optimization)",
+        "TypeScript for type-safe, maintainable code",
+        "Building reusable components (Form inputs, Buttons, Cards, Modals, Tables)",
+        "Writing clean and modular code with proper folder structure",
+        "Error handling and loading states for better UX",
+        "Polished, fully responsive UI across devices",
+        "Advanced data fetching and state management with Redux Toolkit and RTK Query"
+      ],
+      "technologies": {
+        "Frontend": ["React", "TypeScript", "Tailwind CSS"],
+        "State Management": ["Redux Toolkit", "RTK Query"],
+        "UI Components": ["Lucide Icons", "Radix UI", "Custom reusable components"],
+        "Forms & Validation": ["React Hook Form", "Zod", "CVA"],
+        "Build Tools": ["Vite", "ESLint", "Prettier"],
+        "Deployment": ["Vercel", "GitHub"]
+      }
+    },
+    {
+      "id": "2",
+      "title": "Unity Sports Club Backend API",
+      "description": "A scalable RESTful backend API for managing a sports club, built with Express, TypeScript, and MongoDB, handling 100+ endpoints and 18 data models.",
+      "longDescription": "This backend powers the Unity Sports Club system, supporting multiple user roles and full CRUD operations for teams, players, tournaments, matches, venues, and blogs. Features modular routers, reusable middlewares, secure authentication, file uploads to Cloudinary, and optimized database queries for performance and scalability.",
+      "image": "/tempImg.jpg",
+      "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "Mongoose", "JWT", "REST API", "Cloudinary", "Middleware"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "category": "Backend Development",
+      "year": "2025",
+      "duration": "1 month",
+      "client": "Personal Project",
+      "features": [
+        "100+ RESTful API endpoints for users, teams, players, tournaments, matches, venues, and blogs",
+        "18 fully designed and interconnected Mongoose data models",
+        "Role-based access control for Admin, Staff, Player, Manager, and Umpire",
+        "Reusable error-handling middleware and consistent API responses",
+        "File upload handling using Multer and Cloudinary integration",
+        "Distributed modular routers for each resource (user, tournament, match, team, venue, etc.)",
+        "Full CRUD operations with input validation and secure authentication using JWT",
+        "Optimized queries and database operations for performance at scale"
+      ],
+      "challenges": [
+        "Managing and structuring a large-scale backend with 18 data models and 100+ endpoints",
+        "Implementing reusable middleware for error handling, authentication, and file uploads",
+        "Ensuring security and role-based access control across multiple endpoints",
+        "Designing modular routers for maintainability and scalability",
+        "Optimizing MongoDB queries for large datasets",
+        "Integrating Cloudinary for media uploads efficiently"
+      ],
+      "learnings": [
+        "Building large-scale RESTful APIs with Express and TypeScript",
+        "Structuring backend projects with distributed routers and modular code",
+        "Advanced Mongoose schema design and database optimization",
+        "Implementing reusable middleware for error handling and authentication",
+        "Handling file uploads to cloud storage (Cloudinary) securely",
+        "Designing APIs that scale with complex relationships and multiple user roles"
+      ],
+      "technologies": {
+        "Backend": ["Node.js", "Express", "TypeScript", "MongoDB", "Mongoose"],
+        "Authentication": ["JWT", "bcrypt"],
+        "File Uploads": ["Multer", "Cloudinary"],
+        "API Testing": ["Postman", "Swagger/OpenAPI"],
+        "Deployment": ["Heroku", "Vercel (API)"]
+      }
+    },
+    {
+      "id": "3",
+      "title": "Unity Arena",
+      "description": "A dynamic, responsive public-facing landing page for the sports club, showcasing live stats, tournaments, teams, and news.",
+      "longDescription": "This landing page provides fans and visitors with an interactive, fast-loading experience to follow tournaments, view team and player profiles, check live scores, and read news updates. Built with Next.js, Tailwind CSS, and Aceternity UI, it leverages React Query for efficient data fetching and state management, ensuring real-time updates and smooth UX.",
+      "image": "/tempImg.jpg",
+      "tags": ["Next.js", "React", "Tailwind CSS", "Aceternity UI", "React Query", "Responsive", "Landing Page"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "category": "Frontend / Web Development",
+      "year": "2025",
+      "duration": "1 month",
+      "client": "Personal Project",
+      "features": [
+        "Dynamic display of tournaments, matches, and upcoming events",
+        "Team and player profiles with relevant stats",
+        "News/blog highlights and announcements",
+        "Live scores and standings using React Query for real-time data fetching",
+        "Responsive and polished UI using Tailwind CSS and Aceternity UI components",
+        "Performance optimization with lazy loading and code splitting"
+      ],
+      "challenges": [
+        "Fetching and displaying live data efficiently using React Query",
+        "Ensuring seamless performance and fast page loads",
+        "Designing a responsive and engaging UI for mobile and desktop",
+        "Integrating Aceternity UI components consistently with Tailwind CSS"
+      ],
+      "learnings": [
+        "Advanced data fetching and caching with React Query",
+        "Building responsive landing pages with Next.js and Tailwind CSS",
+        "Integrating pre-built UI component libraries (Aceternity UI) into custom design",
+        "Performance optimization techniques for modern frontend apps",
+        "Creating engaging, user-friendly public-facing interfaces"
+      ],
+      "technologies": {
+        "Frontend": ["Next.js", "React", "Tailwind CSS", "Aceternity UI"],
+        "State Management": ["React Query"],
+        "Build Tools": ["Next.js Build", "ESLint", "Prettier"],
+        "Deployment": ["Vercel", "GitHub"]
+      }
+    }
+  ]
+}

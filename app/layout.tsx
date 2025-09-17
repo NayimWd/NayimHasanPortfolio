@@ -11,12 +11,11 @@ export const metadata: Metadata = {
   }
 };
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body>
+    <html lang="en" suppressHydrationWarning={true} data-scroll-behavior="smooth">
+      <body className="bg-black-100">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
