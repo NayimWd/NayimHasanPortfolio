@@ -1,3 +1,4 @@
+import BlogSection from "@/components/BlogSection";
 import Contact from "@/components/Contact";
 import Experiences from "@/components/Experiences";
 import Hero from "@/components/Hero";
@@ -17,6 +18,7 @@ export default function Home() {
           <Projects/>
           <Experiences/>
           <Skills/>
+          <BlogSection/>
           <Contact/>
       </div>
     </main>

@@ -1,0 +1,82 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Building a Reusable Form System with React Hook Form + Zod",
+      "slug": "reusable-form-system-rhf-zod",
+      "description": "A deep dive into building scalable, reusable form components in React using React Hook Form, Zod for validation, and class-variance-authority (CVA) for styling.",
+      "content": "Long form markdown or rich text content goes here...",
+      "tags": ["React", "TypeScript", "Forms", "Zod", "Best Practices"],
+      "category": "Frontend Development",
+      "coverImage": "/tempImg.jpg",
+      "author": {
+        "name": "Naim Hasan",
+        "role": "MERN Stack Developer",
+        "profileImage": "/tempPhoto.jpg"
+      },
+      "time": "09-19-2025",
+      "readingTime": "7 min",
+      "featured": true,
+      "links": {
+        "github": "https://github.com/username/repo",
+        "demo": "https://yourportfolio.com/form-demo"
+      },
+      "seo": {
+        "keywords": ["React Hook Form tutorial", "Zod validation", "Reusable React forms"],
+        "metaDescription": "Step-by-step guide to building reusable form components using React Hook Form, Zod, and CVA."
+      }
+    },
+    {
+      "id": "2",
+      "title": "Building a Reusable Form System with React Hook Form + Zod",
+      "slug": "reusable-form-system-rhf-zod",
+      "description": "A deep dive into building scalable, reusable form components in React using React Hook Form, Zod for validation, and class-variance-authority (CVA) for styling.",
+      "content": "Long form markdown or rich text content goes here...",
+      "tags": ["React", "TypeScript", "Forms", "Zod", "Best Practices"],
+      "category": "Frontend Development",
+      "coverImage": "/tempImg.jpg",
+      "author": {
+        "name": "Naim Hasan",
+        "role": "MERN Stack Developer",
+        "profileImage": "/tempPhoto.jpg"
+      },
+      "time": "09-19-2025",
+      "readingTime": "7 min",
+      "featured": true,
+      "links": {
+        "github": "https://github.com/username/repo",
+        "demo": "https://yourportfolio.com/form-demo"
+      },
+      "seo": {
+        "keywords": ["React Hook Form tutorial", "Zod validation", "Reusable React forms"],
+        "metaDescription": "Step-by-step guide to building reusable form components using React Hook Form, Zod, and CVA."
+      }
+    },
+    {
+      "id": "3",
+      "title": "Building a Reusable Form System with React Hook Form + Zod",
+      "slug": "reusable-form-system-rhf-zod",
+      "description": "A deep dive into building scalable, reusable form components in React using React Hook Form, Zod for validation, and class-variance-authority (CVA) for styling.",
+      "content": "Long form markdown or rich text content goes here...",
+      "tags": ["React", "TypeScript", "Forms", "Zod", "Best Practices"],
+      "category": "Frontend Development",
+      "coverImage": "/tempImg.jpg",
+      "author": {
+        "name": "Naim Hasan",
+        "role": "MERN Stack Developer",
+        "profileImage": "/tempPhoto.jpg"
+      },
+      "time": "09-19-2025",
+      "readingTime": "7 min",
+      "featured": true,
+      "links": {
+        "github": "https://github.com/username/repo",
+        "demo": "https://yourportfolio.com/form-demo"
+      },
+      "seo": {
+        "keywords": ["React Hook Form tutorial", "Zod validation", "Reusable React forms"],
+        "metaDescription": "Step-by-step guide to building reusable form components using React Hook Form, Zod, and CVA."
+      }
+    }
+  ]
+}

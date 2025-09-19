@@ -1,7 +1,6 @@
 import { gridItems } from "@/data"
 import { BentoGrid, BentoGridItem } from "./BentoGrid"
-import { TextGenerateEffect } from "../TextGenerateEffect"
-import { Button } from "@/components/MovingBorders"
+
 
 const Grid = () => {
   return (
@@ -13,8 +12,6 @@ const Grid = () => {
             key={item.id}
             title={item.title}
             description={item.description}
-            // remove icon prop
-            // remove original classname condition
             className={item.className}
             img={item.img}
             imgClassName={item.imgClassName}

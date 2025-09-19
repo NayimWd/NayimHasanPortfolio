@@ -5,19 +5,19 @@ import Link from "next/link";
 import { ExternalLink, Github, Info } from "lucide-react";
 
 interface CardProps {
-    image: string;
-    title: string;
-    description: string;
-    technologies: string[];
-    liveUrl: string;
-    detailsUrl: string;
-    githubUrl: string;
-    className?: string;
+  image: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  liveUrl: string;
+  detailsUrl: string;
+  githubUrl: string;
+  className?: string;
 }
 
-const ProjectCard = ({image, title, description, technologies, liveUrl, detailsUrl, githubUrl, className}: CardProps) => {
-    return (
-        <div
+const ProjectCard = ({ image, title, description, technologies, liveUrl, detailsUrl, githubUrl, className }: CardProps) => {
+  return (
+    <div
       className={cn(
         "group flex flex-col overflow-hidden rounded-2xl border border-white/[0.1] bg-black-200 text-card-foreground shadow-sm transition-all hover:shadow-lg ",
         className
@@ -57,7 +57,7 @@ const ProjectCard = ({image, title, description, technologies, liveUrl, detailsU
 
         {/* Buttons */}
         <div className="mt-auto flex gap-3">
-           {/* Live */}
+          {/* Live */}
           <Link
             href={liveUrl}
             target="_blank"
@@ -90,7 +90,7 @@ const ProjectCard = ({image, title, description, technologies, liveUrl, detailsU
         </div>
       </div>
     </div>
-    )
+  )
 }
 
 export default ProjectCard

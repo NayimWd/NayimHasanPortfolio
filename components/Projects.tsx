@@ -1,7 +1,4 @@
 import projectData from "@/data/project.json"
-import { PinContainer } from "./ui/project/Card3d";
-import { ExternalLink } from "lucide-react";
-import Link from "next/link";
 import ProjectCard from "./ui/project/ProjectCard";
 
 const Projects = () => {
@@ -10,7 +7,7 @@ const Projects = () => {
 
 
     return (
-        <div id="projects" className="paddingY">
+        <section id="projects" className="paddingY">
             <h1 className="heading">
                 A small selection of my{' '}
                 <span className="text-purple"> recent projects </span>
@@ -30,7 +27,7 @@ const Projects = () => {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,6 +1,6 @@
 import Badge from "@/components/ui/Badge"
 import projects from "@/data/project.json"
-import { ArrowLeft, ExternalLink, Github } from "lucide-react"
+import { AlertCircle, ArrowLeft, ExternalLink, Github } from "lucide-react"
 import Link from "next/link";
 
 interface ProjectDetailsProps {
@@ -15,8 +15,18 @@ export default async function ProjectDetails(props: ProjectDetailsProps) {
 
   if (!project) {
     return (
-      <div className="text-center py-20 text-destructive">
-        ❌ Project not found
+      <div className="min-h-screen flex flex-col items-center justify-center bg-black-100 text-foreground px-4 text-center">
+        <AlertCircle size={60} className="text-destructive mb-4 animate-bounce" />
+        <h1 className="text-5xl sm:text-6xl font-extrabold mb-4 text-destructive">❌ Project Not Found</h1>
+        <p className="text-muted-foreground mb-8 max-w-md">
+          Oops! The project you are looking for doesn’t exist or has been removed. Please check back later or explore other projects.
+        </p>
+        <Link
+          href="/home"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple/20 to-black-300 text-primary font-medium shadow-md hover:shadow-lg transition hover:opacity-90"
+        >
+          <ArrowLeft size={20} /> Back to home
+        </Link>
       </div>
     )
   }
@@ -29,27 +39,17 @@ export default async function ProjectDetails(props: ProjectDetailsProps) {
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left Side */}
         <div>
-          {/* Tags */}
-          {/* <div className="flex flex-wrap items-center gap-2 mb-4">
-            {project.tags.map((tag: string, i: number) => (
-              <Badge variant="default"
-                key={i}
-                className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div> */}
+
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <Badge className="bg-black-200 border-border" variant="secondary">
-            {
-              project.category
-            }
+              {
+                project.category
+              }
             </Badge>
             <Badge variant="outline">
-            {
-              project.year
-            }
+              {
+                project.year
+              }
             </Badge>
           </div>
 
