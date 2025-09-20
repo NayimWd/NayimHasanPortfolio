@@ -7,28 +7,31 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 interface blogProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata(
-  props: blogProps
+  { params }: blogProps
 ): Promise<Metadata> {
+  const { id } = await params; // ✅ no await
 
-  const { id } = await props.params;
+  const blog = await blogData.blogs.find((b) => b.id === id);
 
-  const blog = blogData.blogs.find((b) => b.id === id);
-
-  if (!blog) return { title: "Blog Not Found | Nayim Hasan" };
+  if (!blog) {
+    return { title: "Blog Not Found | Nayim Hasan" };
+  }
 
   return {
     title: `${blog.title} | Nayim Hasan`,
-    description: blog.seo.metaDescription,
+    description: blog.seo?.metaDescription,
   };
 }
 
-const page = async (Props: blogProps) => {
+const page = async ({params}: blogProps) => {
 
-  const { id } = await Props.params;
+  const  awaitedParams = await params;
+
+  const { id } =  awaitedParams;
 
   const blogs = blogData.blogs;
 

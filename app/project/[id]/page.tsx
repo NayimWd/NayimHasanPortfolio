@@ -5,18 +5,18 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 interface ProjectDetailsProps {
-  params: { id: string }
+  params: Promise<{ id: string }>,
 }
 
 export async function generateMetadata(
-  props: ProjectDetailsProps
+  {params}: ProjectDetailsProps
 ): Promise<Metadata> {
 
-  const { id } = await props.params;
+  const { id } = await params;
 
-  const project = projects.projects.find((p) => p.id === id);
+  const project =  projects.projects.find((p) => p.id === id);
 
-  if (!project) return { title: "Blog Not Found | Nayim Hasan" };
+  if (!project) return { title: "Project Not Found | Nayim Hasan" };
 
   return {
     title: `${project.title} | Nayim Hasan`,
@@ -24,11 +24,11 @@ export async function generateMetadata(
   };
 }
 
-export default async function ProjectDetails(props: ProjectDetailsProps) {
+export default async function ProjectDetails({params}: ProjectDetailsProps) {
 
-  const { id } = await props.params;
+  const { id } = await params;
 
-  const project = projects.projects.find((p) => p.id === id)
+  const project =  projects.projects.find((p) => p.id === id)
 
   if (!project) {
     return (
