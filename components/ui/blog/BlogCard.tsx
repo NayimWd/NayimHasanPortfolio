@@ -28,29 +28,24 @@ interface BlogCardProps {
 
 const BlogCard = ({ blog }: BlogCardProps) => {
     return (
-        <div className="group bg-black-200 border border-border rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+        <div className="group flex flex-col bg-black-200 border border-border rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
             {/* Cover Image */}
-                <div className="relative w-full h-52 overflow-hidden">
-                    <Image
-                        src={blog.coverImage}
-                        alt={blog.title}
-                        fill={true}
-                        sizes="100"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        priority
-                    />
-                </div>
-          
+            <div className="relative w-full h-52 overflow-hidden">
+                <Image
+                    src={blog.coverImage}
+                    alt={blog.title}
+                    fill
+                    sizes="100"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    priority
+                />
+            </div>
 
             {/* Content */}
-            <div className="p-5 flex flex-col gap-3">
+            <div className="flex flex-col flex-1 p-5 gap-3">
                 {/* Category + Meta */}
                 <div className="flex items-center justify-between text-sm text-muted-foreground">
-                    <Badge variant="outline">
-                        {
-                            blog.category
-                        }
-                    </Badge>
+                    <Badge variant="outline">{blog.category}</Badge>
                     <div className="flex items-center gap-3 text-xs">
                         <span className="flex items-center gap-1">
                             <Calendar size={14} /> {blog.time}
@@ -62,7 +57,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
                 </div>
 
                 {/* Title */}
-                <Link href={`/blog/${blog.slug}`}>
+                <Link href={`/blog/${blog.id}`}>
                     <h2 className="text-lg font-semibold leading-snug text-foreground group-hover:text-primary transition-colors">
                         {blog.title}
                     </h2>
@@ -97,18 +92,15 @@ const BlogCard = ({ blog }: BlogCardProps) => {
                     </div>
                 </div>
 
-                {/* Links */}
-                {blog.links && (
-                    <div className="mt-auto">
-                        <Link
-                            href={`/blogs/${blog.id}`}>
-                            <button className="flex items-center justify-center gap-2 rounded-lg bg-black-300 px-4 py-2 text-sm font-medium text-white shadow-md transition-all hover:scale-[1.5] hover:shadow-lg">
+                {/* Read More button */}
+                <div className="mt-4">
+                    <Link href={`/blog/${blog.id}`}>
+                        <button className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-black-300 px-4 py-2 text-sm font-medium text-white shadow-md transition-all duration-300  hover:scale-[1.05] cursor-pointer hover:bg-black-200">
                             Read More
                             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </button>
-                        </Link>
-                    </div>
-                )}
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
     );

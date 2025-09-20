@@ -1,4 +1,5 @@
 "use client";
+import { useLogoLink } from "@/lib/useLogoLink";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
@@ -60,6 +61,8 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     useMotionValueEvent(scrollY, "change", (latest) => {
         setVisible(latest > 100);
     });
+
+
 
     return (
         <motion.div
@@ -226,9 +229,12 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
+
+    const logoHref = useLogoLink();
+
     return (
         <a
-            href="#home"
+            href={logoHref}
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
         >
             <img

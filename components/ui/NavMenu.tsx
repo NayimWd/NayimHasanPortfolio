@@ -13,13 +13,18 @@ import {
 } from "@/components/ui/Navbar";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { navItems } from "@/data";
+import { useNav } from "@/lib/hooks/useNav";
+// import { navItems } from "@/data";
 
 
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+
+  // navitems
+  const navItems = useNav();
 
   // Sticky effect
   useEffect(() => {
@@ -58,7 +63,7 @@ export default function NavMenu() {
         {/* Desktop Navbar */}
         <NavBody>
           <NavbarLogo />
-          <NavItems items={navItems} />
+          <NavItems items={navItems.filter((item): item is { name: string; link: string } => typeof item.link === "string")} />
           <NavbarButton href="#contact" variant="primary">
             Contact
           </NavbarButton>

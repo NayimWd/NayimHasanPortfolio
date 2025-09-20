@@ -3,8 +3,8 @@ import MagicButton from "./ui/MagicButton"
 
 const Contact = () => {
     return (
-        <div id="contact" className="w-full paddingY relative">
-            <div className="w-full absolute left-0 -bottom-20 py-20 min-h-96 ">
+        <div id="contact" className="w-full paddingY relative overflow-y-hidden">
+            <div className="w-full  absolute left-0 -bottom-20 py-20 min-h-96 ">
                 <img src="/footer-grid.svg" alt="grid-bg"
                 className="w-full h-full opacity-60"
                 />
@@ -15,7 +15,7 @@ const Contact = () => {
                 <a href="mailto:nayim.wd@gmail.com">
                     <MagicButton
                     title="Let's get in touch"
-                    icon={<Send/>}
+                    icon={<Send size={20}/>}
                     position="right"
                     />
                     
