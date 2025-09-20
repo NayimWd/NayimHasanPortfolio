@@ -1,10 +1,27 @@
 import Badge from "@/components/ui/Badge"
 import projects from "@/data/project.json"
 import { AlertCircle, ArrowLeft, ExternalLink, Github } from "lucide-react"
+import { Metadata } from "next";
 import Link from "next/link";
 
 interface ProjectDetailsProps {
   params: { id: string }
+}
+
+export async function generateMetadata(
+  props: ProjectDetailsProps
+): Promise<Metadata> {
+
+  const { id } = await props.params;
+
+  const project = projects.projects.find((p) => p.id === id);
+
+  if (!project) return { title: "Blog Not Found | Nayim Hasan" };
+
+  return {
+    title: `${project.title} | Nayim Hasan`,
+    description: project.description,
+  };
 }
 
 export default async function ProjectDetails(props: ProjectDetailsProps) {

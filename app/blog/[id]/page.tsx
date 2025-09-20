@@ -4,9 +4,26 @@ import { notFound } from "next/navigation"
 import Image from "next/image";
 import { parseHtml } from "@/lib/domPurify";
 import Link from "next/link";
+import { Metadata } from "next";
 
 interface blogProps {
   params: { id: string };
+}
+
+export async function generateMetadata(
+  props: blogProps
+): Promise<Metadata> {
+
+  const { id } = await props.params;
+
+  const blog = blogData.blogs.find((b) => b.id === id);
+
+  if (!blog) return { title: "Blog Not Found | Nayim Hasan" };
+
+  return {
+    title: `${blog.title} | Nayim Hasan`,
+    description: blog.seo.metaDescription,
+  };
 }
 
 const page = async (Props: blogProps) => {
@@ -19,14 +36,15 @@ const page = async (Props: blogProps) => {
 
   if (!blog?.id) return notFound();
 
+
   return (
     <main className="relative bg-black-100 flex flex-col items-center overflow-hidden mx-auto sm:px-10 px-5">
-      
+
       {/*  Cover */}
       <section className="w-full max-w-5xl py-12 sm:py-20 text-center">
         <Link href="/blog">
-        <div className="flex gap-2.5 items-center mb-10 md:mb-12 cursor-pointer py-2 px-4 w-40 rounded hover:bg-black-200"> <ArrowLeft size={18} /> Back to Blog</div>
-      </Link>
+          <div className="flex gap-2.5 items-center mb-10 md:mb-12 cursor-pointer py-2 px-4 w-40 rounded hover:bg-black-200"> <ArrowLeft size={18} /> Back to Blog</div>
+        </Link>
         <div className="relative w-full h-72 sm:h-96 rounded-2xl overflow-hidden shadow-lg">
           <Image
             src={blog.coverImage}

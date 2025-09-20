@@ -21,7 +21,7 @@ const BlogSection = () => {
                     ))
                 }
             </div>
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center mt-10">
                 <Link href="/blog">
                 <MagicButton
                     title="All Blogs"
