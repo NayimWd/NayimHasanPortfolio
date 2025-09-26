@@ -3,6 +3,8 @@ import BlogCard from "@/components/ui/blog/BlogCard";
 import NavMenu from "@/components/ui/NavMenu";
 import blogData from "@/data/blog.json"
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Blogs | Nayim Hasan",
   description: "Read my latest blogs on web development and technology.",

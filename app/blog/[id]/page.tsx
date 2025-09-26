@@ -6,6 +6,8 @@ import { parseHtml } from "@/lib/domPurify";
 import Link from "next/link";
 import { Metadata } from "next";
 
+export const dynamic = "force-static";
+
 interface blogProps {
   params: Promise<{ id: string }>;
 }

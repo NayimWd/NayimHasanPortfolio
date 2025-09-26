@@ -4,6 +4,8 @@ import { AlertCircle, ArrowLeft, ExternalLink, Github } from "lucide-react"
 import { Metadata } from "next";
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 interface ProjectDetailsProps {
   params: Promise<{ id: string }>,
 }

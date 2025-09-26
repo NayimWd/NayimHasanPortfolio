@@ -7,6 +7,8 @@ import Skills from "@/components/Skills";
 import Grid from "@/components/ui/grid/Grid";
 import NavMenu from "@/components/ui/NavMenu";
 
+export const dynamic = "force-static";
+
 
 export default function Home() {
   return (
