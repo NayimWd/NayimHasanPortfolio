@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "./Provider";
 import ScrollToTop from "@/components/ScrollToTop";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Nayim Hasan - portfolio",
@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           {children}
           <ScrollToTop />
+          <SpeedInsights/>
         </ThemeProvider>
       </body>
     </html>
