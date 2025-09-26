@@ -1,13 +1,17 @@
 "use client"
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { Copy } from "lucide-react";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
-import Lottie from "lottie-react";
-import { GlobeDemo } from "./Globe";
+const GlobeDemo = dynamic(() => import("./Globe").then(m => m.GlobeDemo), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full flex items-center justify-center"> Loading Globe... </div>
+})
 
 type gridProps = {
   className?: string;
@@ -20,7 +24,7 @@ type gridProps = {
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
-}
+};
 
 export const BentoGrid = ({
   className,
