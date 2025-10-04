@@ -2,6 +2,7 @@ import Badge from "@/components/ui/Badge"
 import projects from "@/data/project.json"
 import { AlertCircle, ArrowLeft, ExternalLink, Github } from "lucide-react"
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const dynamic = "force-static";
@@ -11,12 +12,12 @@ interface ProjectDetailsProps {
 }
 
 export async function generateMetadata(
-  {params}: ProjectDetailsProps
+  { params }: ProjectDetailsProps
 ): Promise<Metadata> {
 
   const { id } = await params;
 
-  const project =  projects.projects.find((p) => p.id === id);
+  const project = projects.projects.find((p) => p.id === id);
 
   if (!project) return { title: "Project Not Found | Nayim Hasan" };
 
@@ -26,11 +27,11 @@ export async function generateMetadata(
   };
 }
 
-export default async function ProjectDetails({params}: ProjectDetailsProps) {
+export default async function ProjectDetails({ params }: ProjectDetailsProps) {
 
   const { id } = await params;
 
-  const project =  projects.projects.find((p) => p.id === id)
+  const project = projects.projects.find((p) => p.id === id)
 
   if (!project) {
     return (
@@ -121,10 +122,13 @@ export default async function ProjectDetails({params}: ProjectDetailsProps) {
 
         {/* Right Side - Image */}
         <div>
-          <img
+          <Image
             src={project.image}
             alt={project.title}
-            className="w-full rounded-lg shadow-lg border border-border object-cover"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+            className="object-cover w-full rounded-lg shadow-lg border border-border"
           />
         </div>
       </div>

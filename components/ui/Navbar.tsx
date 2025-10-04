@@ -242,6 +242,7 @@ export const NavbarLogo = () => {
                 alt="logo"
                 className="h-8 sm:h-9 w-auto"
                 loading="lazy"
+                aria-label="Nayim Hasan Logo"
             />
         </a>
     );

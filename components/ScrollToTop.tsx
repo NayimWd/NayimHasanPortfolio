@@ -25,7 +25,7 @@ const ScrollToTop = () => {
             onClick={scrollToTop}
             aria-label="Scroll to top"
             className={cn(
-                "fixed bottom-6 right-6 z-100 flex items-center justify-center rounded-lg p-3",
+                "fixed bottom-6 right-6 z-[250] flex items-center justify-center rounded-lg p-3",
                 "bg-black-200 text-primary-foreground shadow-lg transition-all duration-300",
                 "hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple/60",
                 isVisible ? "opacity-100" : "opacity-0 pointer-events-none"

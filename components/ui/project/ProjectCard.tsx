@@ -29,9 +29,10 @@ const ProjectCard = ({ image, title, description, technologies, liveUrl, details
           src={image}
           alt={title}
           fill={true}
-          sizes="100"
           className="object-cover transition-transform duration-500 w-full group-hover:scale-105"
-          priority
+          sizes="(max-width: 640px) 100vw, 
+             (max-width: 768px) 50vw, 
+             33vw"
         />
       </div>
 

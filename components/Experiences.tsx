@@ -2,6 +2,7 @@ import React from 'react'
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { workExperience } from '@/data';
 import { Button } from './MovingBorders';
+import Image from 'next/image';
 
 const Experiences = () => {
   return (
@@ -26,9 +27,12 @@ const Experiences = () => {
             >
               <div className=' p-3 py-6 md:p-5 lg:p-10 '>
                 <div className='w-full flex flex-col sm:flex-row gap-10 sm:gap-5 lg:gap-2 items-center'>
-                  <img
+                  <Image
                     className='lg:w-32 md:w-20 w-16 text-center'
-                    src={card.thumbnail} alt="thumbnail" loading='lazy' />
+                    src={card.thumbnail} alt={`thumbnail-${card.id}`} loading='lazy'
+                    width={128}
+                    height={80}
+                    />
 
                   <div className='lg:ms-5'>
                     <h1 className='text-start text-xl md:text-2xl font-bold'>

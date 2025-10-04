@@ -10,7 +10,9 @@ import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 const GlobeDemo = dynamic(() => import("./Globe").then(m => m.GlobeDemo), {
   ssr: false,
-  loading: () => <div className="h-64 w-full flex items-center justify-center"> Loading Globe... </div>
+  loading: () => (
+    <div className="h-1 w-full flex items-center justify-center"> Loading Globe... </div>
+  )
 })
 
 type gridProps = {
@@ -98,7 +100,6 @@ export const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
-              //   width={220}
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -127,7 +128,9 @@ export const BentoGridItem = ({
           </div>
 
           {/* for the github 3d globe */}
-          {id === 2 && <GlobeDemo />}
+          {id === 2 &&
+            <GlobeDemo />
+          }
 
           {/* Tech stack list div */}
           {id === 3 && (
