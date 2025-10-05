@@ -15,25 +15,89 @@ interface blogProps {
 export async function generateMetadata(
   { params }: blogProps
 ): Promise<Metadata> {
-  const { id } = await params; // ✅ no await
+  const { id } = await params;
+  const blog = blogData.blogs.find((b) => b.id === id);
 
-  const blog = await blogData.blogs.find((b) => b.id === id);
-
+  // Handle 404 (blog not found)
   if (!blog) {
-    return { title: "Blog Not Found | Nayim Hasan" };
+    return {
+      title: "Blog Not Found | Nayim Hasan",
+      description: "The blog post you’re looking for could not be found.",
+      robots: { index: false, follow: false },
+    };
   }
 
+  const {
+    title,
+    seo,
+    coverImage,
+    author = "Nayim Hasan",
+  } = blog;
+
+  const date = (blog as any).date || blog.time || new Date().toISOString();
+
+  const metaTitle = `${title} | Nayim Hasan`;
+  const metaDescription =
+    seo?.metaDescription ||
+    `Read "${title}" — an insightful blog post from Nayim Hasan’s learning journey.`;
+  const keywords =
+    seo?.keywords ||
+    ["Nayim Hasan", "Blog", "Web Development", "MERN Stack", "React", "Next.js"];
+
+  const imageUrl = coverImage || "/nhLogo.png";
+  const canonicalUrl = `https://nayim-hasan-portfolio.vercel.app/blog/${id}`;
+
   return {
-    title: `${blog.title} | Nayim Hasan`,
-    description: blog.seo?.metaDescription,
+    metadataBase: new URL("https://nayim-hasan-portfolio.vercel.app"),
+    title: metaTitle,
+    description: metaDescription,
+    keywords,
+    authors: [{ name: typeof author === "string" ? author : author.name }],
+    creator: "Nayim Hasan",
+    publisher: "Nayim Hasan",
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: metaTitle,
+      description: metaDescription,
+      url: canonicalUrl,
+      siteName: "Nayim Hasan Portfolio",
+      type: "article",
+      publishedTime: date,
+      authors: [typeof author === "string" ? author : author.name],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${title} – Blog by Nayim Hasan`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metaTitle,
+      description: metaDescription,
+      images: [imageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+    },
   };
 }
 
-const page = async ({params}: blogProps) => {
+const page = async ({ params }: blogProps) => {
 
-  const  awaitedParams = await params;
+  const awaitedParams = await params;
 
-  const { id } =  awaitedParams;
+  const { id } = awaitedParams;
 
   const blogs = blogData.blogs;
 

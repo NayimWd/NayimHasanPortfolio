@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const dynamic = "force-static";
+export const dynamic = "force-static";  
 
 interface ProjectDetailsProps {
   params: Promise<{ id: string }>,
