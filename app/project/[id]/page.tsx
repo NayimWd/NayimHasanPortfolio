@@ -89,7 +89,7 @@ export default async function ProjectDetails({ params }: ProjectDetailsProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex gap-2 items-center px-5 py-2.5 rounded-lg bg-gradient-to-r from-purple/20 to-black-200 text-primary font-medium shadow-md hover:shadow-lg transition hover:opacity-90"
+              className="flex gap-2 items-center px-4 sm:px-5 py-2.5 rounded-md bg-gradient-to-r from-purple/20 to-black-200 text-primary font-medium shadow-md hover:shadow-lg transition hover:opacity-90"
             >
               <ExternalLink size={20} /> View Live Site
             </a>
@@ -97,7 +97,7 @@ export default async function ProjectDetails({ params }: ProjectDetailsProps) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 flex gap-2 items-center py-2.5 rounded-lg bg-gradient-to-r from-purple/20 to-black-200 border border-white/10 text-primary font-medium hover:opacity-90 transition shadow-lg"
+              className="px-4 sm:px-5 flex gap-2 items-center py-2.5 rounded-md bg-gradient-to-r from-purple/20 to-black-200  primary font-medium hover:opacity-90 transition shadow-lg"
             >
               <Github size={20} /> View Code
             </a>
@@ -125,8 +125,8 @@ export default async function ProjectDetails({ params }: ProjectDetailsProps) {
           <Image
             src={project.image}
             alt={project.title}
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
+            width={600}
+            height={600}
             priority
             className="object-cover w-full rounded-lg shadow-lg border border-border"
           />

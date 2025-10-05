@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "./Provider";
 import ScrollToTop from "@/components/ScrollToTop";
-// import { SpeedInsights } from "@vercel/speed-insights/next"
-// import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nayim-hasan-portfolio.vercel.app"), 
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nayim Hasan - Portfolio",
     description: "Learning journey",
-    images: ["/og-image.png"],
+    images: ["/nhLogo.png"],
   },
 };
 
@@ -47,7 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           {children}
           <ScrollToTop />
-
+          <Analytics/>
+          <SpeedInsights/>
         </ThemeProvider>
       </body>
     </html>
