@@ -5,27 +5,31 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
-  title: "Nayim Hasan | MERN Developer",
-  description: "Frontend Focused MERN Developer, Building scalable and maintainable applications.",
+  metadataBase: new URL("https://nayim-hasan-portfolio.vercel.app"),
+  title: "Nayim Hasan — MERN Developer",
+  description:
+    "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
   openGraph: {
     type: "website",
-    title: "Nayim Hasan | MERN Developer",
-    description: "Frontend Focused MERN Developer, Building scalable and maintainable applications.",
-    url: "https://nayim-hasan-portfolio.vercel.app",
+    title: "Nayim Hasan — MERN Developer",
+    description:
+      "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
+    url: "/",
     images: [
       {
-        url: "https://nayim-hasan-portfolio.vercel.app/api/og",
+        url: "/api/og",
         width: 1200,
         height: 630,
+        alt: "Nayim Hasan Portfolio OG Card",
       },
     ],
-    siteName: "Nayim Hasan Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nayim Hasan | MERN Developer",
-    description: "Frontend Focused MERN Developer, Building scalable and maintainable applications.",
-    images: ["https://nayim-hasan-portfolio.vercel.app/api/og"],
+    title: "Nayim Hasan — MERN Developer",
+    description:
+      "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
+    images: ["/api/og"],
   },
 };
 
