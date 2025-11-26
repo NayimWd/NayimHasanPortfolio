@@ -19,7 +19,7 @@ export const metadata = {
       "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
     images: [
       {
-        url: "https://nayim-hasan-portfolio.vercel.app/api/og",
+        url: "/api/og?format=png",
         width: 1200,
         height: 630,
         alt: "Portfolio OG Card — Nayim Hasan",
@@ -31,7 +31,7 @@ export const metadata = {
     title: "Nayim Hasan — MERN Developer",
     description:
       "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
-    images: ["https://nayim-hasan-portfolio.vercel.app/api/og"],
+    images: ["/api/og?format=png"],
   },
 }
 
