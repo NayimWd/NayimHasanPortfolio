@@ -16,10 +16,10 @@ export async function GET() {
           background: "#0d1117",
           color: "#E6EDF3",
           fontFamily: "sans-serif",
-          padding: "40px 60px",
+          padding: "40px 50px",
         }}
       >
-        {/* Left Sidebar Avatar */}
+      
         <div
           style={{
             width: 180,
@@ -41,7 +41,7 @@ export async function GET() {
           />
         </div>
 
-        {/* Right Text Content */}
+     
         <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
           <div
             style={{
@@ -63,7 +63,6 @@ export async function GET() {
             {subtitle}
           </div>
 
-          {/* Bullet Lines */}
           <div
             style={{
               display: "flex",
@@ -72,13 +71,13 @@ export async function GET() {
               fontSize: 26,
             }}
           >
-            <div>• Frontend-focused MERN Developer</div>
-            <div>• Building maintainable scalable UI</div>
-            <div>• Advanced TypeScript Patterns</div>
-            <div>• Cloud Architecture & System Design</div>
+            <div>⚡ Frontend-focused MERN Developer</div>
+            <div>🎯 Building maintainable scalable UI</div>
+            <div>🚀 Advanced TypeScript Patterns</div>
+            <div>📖 Cloud Architecture & System Design</div>
           </div>
 
-          {/* Bottom URL */}
+
           <div
             style={{
               marginTop: "auto",
