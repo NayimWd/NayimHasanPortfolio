@@ -11,16 +11,18 @@ export const metadata = {
     "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
   openGraph: {
     type: "website",
+    locale: "en_US",
+    url: "https://nayim-hasan-portfolio.vercel.app",
+    siteName: "Nayim Hasan Portfolio",
     title: "Nayim Hasan — MERN Developer",
     description:
       "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
-    url: "/",
     images: [
       {
         url: "/api/og",
         width: 1200,
         height: 630,
-        alt: "Nayim Hasan Portfolio OG Card",
+        alt: "Portfolio OG Card — Nayim Hasan",
       },
     ],
   },
@@ -31,7 +33,7 @@ export const metadata = {
       "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
     images: ["/api/og"],
   },
-};
+}
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
