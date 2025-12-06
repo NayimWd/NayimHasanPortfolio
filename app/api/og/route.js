@@ -3,9 +3,6 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export async function GET() {
-  const title = "Nayim Hasan — MERN Developer";
-  const subtitle = "Frontend Architecture · Scalability · Clean Code";
-
   return new ImageResponse(
     (
       <div
@@ -19,7 +16,7 @@ export async function GET() {
           padding: "40px 50px",
         }}
       >
-      
+
         <div
           style={{
             width: 180,
@@ -28,6 +25,7 @@ export async function GET() {
             background: "linear-gradient(90deg,#3b82f6,#8b5cf6)",
             marginRight: 40,
             overflow: "hidden",
+            display: "flex",
           }}
         >
           <img
@@ -43,16 +41,23 @@ export async function GET() {
           />
         </div>
 
-     
-        <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flex: 1,
+          }}
+        >
+
           <div
             style={{
               fontSize: 56,
               fontWeight: 700,
               marginBottom: 8,
+              display: "flex",
             }}
           >
-            {title}
+            Nayim Hasan — MERN Developer
           </div>
 
           <div
@@ -60,9 +65,10 @@ export async function GET() {
               fontSize: 28,
               opacity: 0.7,
               marginBottom: 32,
+              display: "flex",
             }}
           >
-            {subtitle}
+            Frontend Architecture · Scalability · Clean Code
           </div>
 
           <div
@@ -73,12 +79,11 @@ export async function GET() {
               fontSize: 26,
             }}
           >
-            <div>⚡ Frontend-focused MERN Developer</div>
-            <div>🎯 Building maintainable scalable UI</div>
-            <div>🚀 Advanced TypeScript Patterns</div>
-            <div>📖 Cloud Architecture & System Design</div>
+            <div style={{ display: "flex" }}>⚡ Frontend-focused MERN Developer</div>
+            <div style={{ display: "flex" }}>🎯 Building maintainable scalable UI</div>
+            <div style={{ display: "flex" }}>🚀 Advanced TypeScript Patterns</div>
+            <div style={{ display: "flex" }}>📖 Cloud Architecture & System Design</div>
           </div>
-
 
           <div
             style={{
@@ -86,6 +91,7 @@ export async function GET() {
               fontSize: 22,
               opacity: 0.6,
               fontFamily: "monospace",
+              display: "flex",
             }}
           >
             nayim-hasan-portfolio.vercel.app
