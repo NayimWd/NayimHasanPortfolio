@@ -13,7 +13,7 @@ export async function GET() {
           background: "#0d1117",
           color: "#E6EDF3",
           fontFamily: "sans-serif",
-          padding: "40px 50px",
+          padding: "40px",
         }}
       >
 
@@ -23,13 +23,13 @@ export async function GET() {
             height: 180,
             borderRadius: "50%",
             background: "linear-gradient(90deg,#3b82f6,#8b5cf6)",
-            marginRight: 40,
+            marginRight: 50,
             overflow: "hidden",
             display: "flex",
           }}
         >
           <img
-            src="https://nayim-hasan-portfolio.vercel.app/me.jpg"
+            src="https://nayim-hasan-portfolio.vercel.app/me.png"
             alt="Profile"
             width={180}
             height={180}
@@ -53,7 +53,7 @@ export async function GET() {
             style={{
               fontSize: 56,
               fontWeight: 700,
-              marginBottom: 8,
+              marginBottom: 12,
               display: "flex",
             }}
           >
@@ -64,7 +64,7 @@ export async function GET() {
             style={{
               fontSize: 28,
               opacity: 0.7,
-              marginBottom: 32,
+              marginBottom: 24,
               display: "flex",
             }}
           >
@@ -75,8 +75,8 @@ export async function GET() {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: 12,
-              fontSize: 26,
+              gap: 10,
+              fontSize: 28,
             }}
           >
             <div style={{ display: "flex" }}>⚡ Frontend-focused MERN Developer</div>
