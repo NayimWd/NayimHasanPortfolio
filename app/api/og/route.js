@@ -33,6 +33,8 @@ export async function GET() {
           <img
             src="https://nayim-hasan-portfolio.vercel.app/me.jpg"
             alt="Profile"
+            width={180}
+            height={180}
             style={{
               width: "100%",
               height: "100%",
