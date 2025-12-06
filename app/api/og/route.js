@@ -6,10 +6,6 @@ export async function GET() {
   const title = "Nayim Hasan — MERN Developer";
   const subtitle = "Frontend Architecture · Scalability · Clean Code";
 
-  const avatar = await fetch(
-    "https://nayim-hasan-portfolio.vercel.app/me.jpg"
-  ).then((res) => res.arrayBuffer());
-
   return new ImageResponse(
     (
       <div
@@ -35,7 +31,7 @@ export async function GET() {
           }}
         >
           <img
-            src={avatar}
+            src="https://nayim-hasan-portfolio.vercel.app/me.jpg"
             alt="Profile"
             style={{
               width: "100%",
