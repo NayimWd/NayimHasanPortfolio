@@ -33,6 +33,7 @@ const ProjectCard = ({ image, title, description, technologies, liveUrl, details
           sizes="(max-width: 640px) 100vw, 
              (max-width: 768px) 50vw, 
              33vw"
+          priority
         />
       </div>
 
@@ -63,7 +64,7 @@ const ProjectCard = ({ image, title, description, technologies, liveUrl, details
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-md bg-gradient-to-r from-black-300 to-purple/20 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
+            className="flex items-center gap-2 rounded-md bg-gradient-to-r from-black-300 to-purple/20 px-3 sm:px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
           >
             <ExternalLink className="h-4 w-4" />
             Live
@@ -74,7 +75,7 @@ const ProjectCard = ({ image, title, description, technologies, liveUrl, details
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-md bg-black-300 px-4 py-2 text-sm font-medium text-foreground shadow-md transition hover:opacity-90"
+            className="flex items-center gap-2 rounded-md bg-black-300 px-3 sm:px-4 py-2 text-sm font-medium text-foreground shadow-md transition hover:opacity-90"
           >
             <Github className="h-4 w-4" />
             Code
@@ -83,7 +84,7 @@ const ProjectCard = ({ image, title, description, technologies, liveUrl, details
           {/* Details */}
           <Link
             href={detailsUrl}
-            className="flex items-center gap-2 rounded-md border bg-gradient-to-r from-purple/20 to-black-300 border-border px-4 py-2 text-sm font-medium transition hover:bg-accent hover:text-accent-foreground shadow-md"
+            className="flex items-center gap-2 rounded-md border bg-gradient-to-r from-purple/20 to-black-300 border-border px-3 sm:px-4 py-2 text-sm font-medium transition hover:bg-accent hover:text-accent-foreground shadow-md"
           >
             <Info className="h-4 w-4" />
             Details

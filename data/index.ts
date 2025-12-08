@@ -1,20 +1,3 @@
-import javaScript from "@/public/javascript.svg";
-import typeScript from "@/public/typescript.svg";
-import react from "@/public/react.svg";
-import next from "@/public/nextjs.svg";
-import redux from "@/public/redux.svg";
-import tailwind from "@/public/tailwindcss.svg";
-import node from "@/public/node-js.svg";
-import express from "@/public/express.svg";
-import mongodb from "@/public/mongodb.svg";
-import mongoose from "@/public/mongoose.svg";
-import postman from "@/public/postman.svg";
-import redis from "@/public/redis.svg";
-import vsCode from "@/public/code.svg";
-import git from "@/public/github.svg";
-import jwt from "@/public/jwt.svg";
-import docker from "@/public/docker.svg";
-
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -90,7 +73,6 @@ export const gridItems = [
   },
 ];
 
-
 export const workExperience = [
   {
     id: 1,
@@ -126,89 +108,56 @@ export const workExperience = [
   },
 ];
 
-export const skills = [
-  {
-    id: 1,
-    name: "JavaScript",
-    img: javaScript,
-  },
-  {
-    id: 2,
-    name: "TypeScript",
-    img: typeScript,
-  },
-  {
-    id: 3,
-    name: "React",
-    img: react,
-  },
-  {
-    id: 4,
-    name: "Next",
-    img: next,
-  },
-  {
-    id: 5,
-    name: "Redux Toolkit",
-    img: redux,
-  },
-  {
-    id: 6,
-    name: "Tailwind",
-    img: tailwind,
-  },
-  {
-    id: 7,
-    name: "Nodejs",
-    img: node,
-  },
-  {
-    id: 8,
-    name: "Express",
-    img: express,
-  },
-  {
-    id: 9,
-    name: "MongoDB",
-    img: mongodb,
-  },
-  {
-    id: 10,
-    name: "mongoose",
-    img: mongoose,
-  },
-  {
-    id: 11,
-    name: "Redis",
-    img: redis,
-  },
-  {
-    id: 13,
-    name: "JWT",
-    img: jwt,
-  },
-  {
-    id: 14,
-    name: "Postman",
-    img: postman,
-  },
-  {
-    id: 15,
-    name: "Git",
-    img: git,
-  },
-  {
-    id: 16,
-    name: "VS Code",
-    img: vsCode,
-  },
-  {
-    id: 17,
-    name: "Docker",
-    img: docker,
-  },
-];
+export const skills = {
+  languages: [
+    { name: "JavaScript", img: "/javascript.svg" },
+    { name: "TypeScript", img: "/typescript.svg" },
+  ],
 
+  frontend: [
+    { name: "React", img: "/react.svg" },
+    { name: "Next.js", img: "/nextjs.svg" },
+    { name: "Redux Toolkit", img: "/redux.svg" },
+    { name: "Tailwind CSS", img: "/tailwindcss.svg" },
+    { name: "React Hook Form", img: "/reacthookform.svg" },
+    { name: "Zod", img: "/zod.svg" },
+    { name: "Axios", img: "/axios.svg" },
+    { name: "TanStack Query", img: "/reactquery.svg" },
+    { name: "TanStack Table", img: "/reacttable.svg" },
+    { name: "TipTap Editor", img: "/tiptap.svg" },
+  ],
+
+  backend: [
+    { name: "Node.js", img: "/node-js.svg" },
+    { name: "Express.js", img: "/express.svg" },
+    { name: "MongoDB", img: "/mongodb.svg" },
+    { name: "Mongoose", img: "/mongoose.svg" },
+    { name: "Redis", img: "/redis.svg" },
+    { name: "JWT Authentication", img: "/jwt.svg" },
+    { name: "REST API", img: "/tiptap.svg" },
+    { name: "MVC Pattern", img: "/instructure.svg" },
+    { name: "Layered Architecture", img: "/openlayers.svg" },
+  ],
+
+  tools: [
+    { name: "Postman", img: "/postman.svg" },
+    { name: "Git", img: "/github.svg" },
+    { name: "GitHub", img: "/github.svg" },
+    { name: "VS Code", img: "/code.svg" },
+    { name: "ESLint", img: "/eslint.svg" },
+    { name: "Prettier", img: "/prettier.svg" },
+    { name: "npm", img: "/npm.svg" },
+    { name: "pnpm", img: "/pnpm.svg" },
+    { name: "Figma", img: "/figma.svg" },
+  ],
+
+  devops: [
+    { name: "Docker", img: "/docker.svg" },
+    { name: "Fly.io", img: "/flydotio.svg" },
+    { name: "Cloudflare", img: "/cloudflare.svg" },
+    { name: "Vercel", img: "/vercel.svg" },
+  ],
+};
 
 export const socialMedia = [
   {
