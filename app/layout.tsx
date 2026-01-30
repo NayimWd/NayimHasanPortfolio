@@ -3,8 +3,12 @@ import { ThemeProvider } from "./Provider";
 import ScrollToTop from "@/components/ScrollToTop";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
+  verification: {
+    google: "BGK9qFcmSAJsJER6fSOuF8hLm3IRy0rpGv1m65FnJro"
+  },
   metadataBase: new URL("https://nayim-hasan-portfolio.vercel.app"),
   title: "Nayim Hasan — MERN Developer",
   description:
@@ -40,7 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning={true} data-scroll-behavior="smooth">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" 
+
+        />
       </head>
       <body>
         <ThemeProvider
