@@ -25,10 +25,11 @@ const Contact = () => {
                 <p className="flex items-center gap-2 text-sm sm:text-base font-light md:font-normal"> <Copyright size={16} /> 2026 Nayim Hasan </p>
                 <div className="flex items-center z-10 gap-4">
                     <a target="_blank" href="https://github.com/NayimWd/NayimWd-Unity-Sports-Dashboard">
-                        <a target="_blank" href="https://www.linkedin.com/in/nayim-hasan/">
-                            <img className="w-8 h-8 rounded-lg bg-slate-800 p-1 cursor-pointer" src="/github.svg" alt="github logo" loading="lazy" />
-                        </a>
                     </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/nayim-hasan/">
+                        <img className="w-8 h-8 rounded-lg bg-slate-800 p-1 cursor-pointer" src="/github.svg" alt="github logo" loading="lazy" />
+                    </a>
+
                     <img className="w-8 h-8 rounded-lg bg-slate-800 p-1.5 cursor-pointer" src="/link.svg" alt="github logo" loading="lazy" />
                     <Facebook size={32} className="cursor-pointer rounded-lg bg-slate-800 p-1.5 text-[#1877F2]" />
                 </div>

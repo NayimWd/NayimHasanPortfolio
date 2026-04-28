@@ -1,4 +1,4 @@
-import "./global.css";
+import "@/app/globals.css";
 import { ThemeProvider } from "./Provider";
 import ScrollToTop from "@/components/ScrollToTop";
 import { SpeedInsights } from "@vercel/speed-insights/next"

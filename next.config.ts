@@ -16,7 +16,8 @@ const nextConfig: NextConfig = {
       "clsx",
       "tailwind-merge",
       "class-variance-authority"
-    ]
+    ],
+    
   }
 };
 
