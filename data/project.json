@@ -1,90 +1,122 @@
 {
   "projects": [
     {
-      "id": "1",
-      "title": "Unity Sports Club Dashboard",
-      "description": "A modern, responsive dashboard for sports club management with multi-role support, interactive tables, and full CRUD functionality.",
-      "longDescription": "A full-featured sports club management dashboard built with React, TypeScript, and Tailwind CSS. Supports Admin, Staff, Player, Manager, and Umpire roles with features like team & player management, tournaments, matches, results, blogs, and dynamic tables. Demonstrates advanced frontend development practices, reusable components, and optimized state management.",
-      "image": "/tempImg.jpg",
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Redux Toolkit", "Dashboard", "Responsive"],
-      "liveUrl": "#",
-      "githubUrl": "https://github.com/NayimWd/NayimWd-Unity-Sports-Dashboard",
-      "category": "Web Development",
-      "year": "2025",
-      "duration": "2 months",
-      "client": "Personal Project",
-      "features": [
-        "Multi-role management (Admin, Staff, Player, Manager, Umpire) with CRUD operations",
-        "Dynamic tables with sorting, filtering, pagination, and responsive design",
-        "Reusable forms and modals with validation and rich text editor support",
-        "Theme switching (Light/Dark/System), loading skeletons, and error handling"
-      ],
-      "learnings": [
-        "Advanced React patterns (component composition, hooks, HOCs, custom hooks)",
-        "Performance optimization (code splitting, lazy loading, image optimization)",
-        "TypeScript for type-safe, maintainable code",
-        "Building reusable components (Form inputs, Buttons, Cards, Modals, Tables)",
-        "Writing clean and modular code with proper folder structure",
-        "Error handling and loading states for better UX",
-        "Polished, fully responsive UI across devices",
-        "Advanced data fetching and state management with Redux Toolkit and RTK Query"
-      ],
-      "technologies": {
-        "Frontend": ["React", "TypeScript", "Tailwind CSS"],
-        "State Management": ["Redux Toolkit", "RTK Query"],
-        "UI Components": ["Lucide Icons", "Radix UI", "Custom reusable components"],
-        "Forms & Validation": ["React Hook Form", "Zod", "CVA"],
-        "Build Tools": ["Vite", "ESLint", "Prettier"],
-        "Deployment": ["Vercel", "GitHub"]
-      }
-    },
-    {
-      "id": "2",
-      "title": "Unity Sports Club Backend API",
-      "description": "A scalable RESTful backend API for managing a sports club, built with Express, TypeScript, and MongoDB, handling 100+ endpoints and 18 data models.",
-      "longDescription": "This backend powers the Unity Sports Club system, supporting multiple user roles and full CRUD operations for teams, players, tournaments, matches, venues, and blogs. Features modular routers, reusable middlewares, secure authentication, file uploads to Cloudinary, and optimized database queries for performance and scalability.",
-      "image": "/tempImg.jpg",
-      "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "Mongoose", "JWT", "REST API", "Cloudinary", "Middleware"],
-      "liveUrl": "#",
-      "githubUrl": "https://github.com/NayimWd/nayimwd-Unity_Sports_Club_Api",
-      "category": "Backend Development",
-      "year": "2025",
-      "duration": "1 month",
-      "client": "Personal Project",
-      "features": [
-        "100+ RESTful API endpoints for users, teams, players, tournaments, matches, venues, and blogs",
-        "18 fully designed and interconnected Mongoose data models",
-        "Role-based access control for Admin, Staff, Player, Manager, and Umpire",
-        "Reusable error-handling middleware and consistent API responses",
-        "File upload handling using Multer and Cloudinary integration",
-        "Distributed modular routers for each resource (user, tournament, match, team, venue, etc.)",
-        "Full CRUD operations with input validation and secure authentication using JWT",
-        "Optimized queries and database operations for performance at scale"
-      ],
-      "challenges": [
-        "Managing and structuring a large-scale backend with 18 data models and 100+ endpoints",
-        "Implementing reusable middleware for error handling, authentication, and file uploads",
-        "Ensuring security and role-based access control across multiple endpoints",
-        "Designing modular routers for maintainability and scalability",
-        "Optimizing MongoDB queries for large datasets",
-        "Integrating Cloudinary for media uploads efficiently"
-      ],
-      "learnings": [
-        "Building large-scale RESTful APIs with Express and TypeScript",
-        "Structuring backend projects with distributed routers and modular code",
-        "Advanced Mongoose schema design and database optimization",
-        "Implementing reusable middleware for error handling and authentication",
-        "Handling file uploads to cloud storage (Cloudinary) securely",
-        "Designing APIs that scale with complex relationships and multiple user roles"
-      ],
-      "technologies": {
-        "Backend": ["Node.js", "Express", "TypeScript", "MongoDB", "Mongoose"],
-        "Authentication": ["JWT", "bcrypt"],
-        "File Uploads": ["Multer", "Cloudinary"],
-        "API Testing": ["Postman", "Swagger/OpenAPI"],
-        "Deployment": ["Heroku", "Vercel (API)"]
-      }
-    },
+  "id": "1",
+  "title": "Unity Sports Club Dashboard",
+  "description": "A production-grade, multi-role sports club management dashboard built with advanced React patterns, reusable component systems, and optimized state management.",
+  "longDescription": "A full-featured sports club management dashboard built with React, TypeScript, and Tailwind CSS — used as a personal playground to learn by building. Features role-based routing and auth for Admin, Manager, Player, and Umpire roles. Admin manages the entire app including users, tournaments, applications, schedules, matches, results, venues, and news. Managers handle team creation, player management, playing squads, and tournament applications. Players and Umpires can create accounts, build profiles, and access read-only views. Built with a feature-based folder structure and advanced React design patterns including compound composition, strategy pattern, container-presenter, HOFs, and custom hooks. All reusable components are hand-crafted using CVA and cn utilities. Forms built with React Hook Form and Zod, rich text with Tiptap, and flexible tables with TanStack Table. Uses RTK Query for data fetching, Sentry for error monitoring, and manual code splitting for optimized performance.",
+  "image": "/tempImg.jpg",
+  "tags": ["React", "TypeScript", "Tailwind CSS", "Redux Toolkit", "RTK Query", "TanStack Table", "React Hook Form", "Zod", "Tiptap", "Sentry", "Dashboard", "Responsive"],
+  "liveUrl": "https://unity-sports-dashboard.vercel.app",
+  "githubUrl": "https://github.com/NayimWd/NayimWd-Unity-Sports-Dashboard",
+  "category": "Web Development",
+  "year": "2026",
+  "duration": "2 months",
+  "client": "Personal Project",
+  "features": [
+    "Role-based routing and auth — Admin, Manager, Player, Umpire with scoped access and CRUD",
+    "Admin panel: user management, tournaments, applications, schedules, matches, results, venues, and news",
+    "Manager panel: team creation, player add/remove, playing squad builder, tournament application",
+    "Flexible TanStack Table with sorting, filtering, and pagination",
+    "Custom reusable component system — Input, PasswordInput, EmailInput, DateInput, TextInput and more",
+    "Rich text editing with Tiptap, forms with React Hook Form + Zod validation",
+    "Error monitoring with Sentry and manual chunk-based code splitting",
+    "Theme switching (Light/Dark/System), loading skeletons, and full responsive design"
+  ],
+  "challenges": [
+  "Designing a scalable, reusable component system from scratch using CVA and cn without a UI library",
+  "Implementing complex role-based routing and scoped access for 4 different user types",
+  "Manual code splitting and chunk size optimization to improve initial load performance",
+  "Managing server state, caching, and synchronization efficiently with RTK Query",
+  "Building a flexible TanStack Table system that works across many different data shapes",
+  "Structuring a large React codebase with feature-based architecture and keeping it maintainable",
+  "Handling error boundaries and loading states consistently across the entire app",
+  "Integrating Tiptap rich text editor with React Hook Form and Zod validation"
+],
+  "learnings": [
+    "Advanced React design patterns: compound composition, strategy, container-presenter, HOF, custom hooks, and props drilling alternatives (Context / composition)",
+    "Hand-built reusable component library using CVA and cn — inputs, buttons, cards, modals, tables",
+    "Flexible form system with React Hook Form, Zod schema validation, and field-level component breakdown",
+    "Powerful data tables with TanStack Table — sortable, filterable, paginated",
+    "Rich text editor integration using Tiptap React",
+    "Feature-based folder structure for scalable, maintainable architecture",
+    "RTK Query for efficient server state, caching, and data fetching",
+    "Manual code splitting and lazy loading for performance optimization",
+    "Error monitoring in production using Sentry",
+    "Role-based access control with protected routing",
+    "TypeScript for type-safe, self-documenting code",
+    "Fully responsive, polished UI with dark/light/system theme support"
+  ],
+  "technologies": {
+    "Frontend": ["React", "TypeScript", "Tailwind CSS"],
+    "State Management": ["Redux Toolkit", "RTK Query"],
+    "UI Components": ["CVA", "cn (clsx + tailwind-merge)", "Lucide Icons", "Radix UI", "Custom reusable components"],
+    "Forms & Validation": ["React Hook Form", "Zod"],
+    "Rich Text": ["Tiptap React"],
+    "Tables": ["TanStack Table"],
+    "Monitoring": ["Sentry"],
+    "Build & Optimization": ["Vite", "Manual Code Splitting", "Lazy Loading", "ESLint", "Prettier"],
+    "Deployment": ["Vercel", "GitHub"]
+  }
+},
+   {
+  "id": "2",
+  "title": "Unity Sports Club Backend API",
+  "description": "A scalable RESTful backend API for managing a sports club, built with Express, TypeScript, and MongoDB — covering 100+ endpoints, 18 data models, and production-level concerns like caching, logging, and transactions.",
+  "longDescription": "This backend powers the Unity Sports Club system, built as a personal learning project to go deep into real-world backend engineering. Started from requirements analysis and problem finding, then moved to ERD-based schema design with proper relations and normalization. Built 100+ RESTful endpoints across 18 interconnected Mongoose models using a feature-based modular routing structure. Implemented role-based auth (Admin, Manager, Player, Umpire) with JWT and bcrypt. Applied query optimizations like .lean(), field selection, .exists() for existence checks, and MongoDB transactions with rollback for data integrity. Added middleware-based Redis caching (moderate level), API timeout handling, structured logging with Pino, and file uploads via Multer and Cloudinary. Solved real deployment challenges including CORS issues. Documented the project with an ERD diagram and project flow structure showing how all pieces wire together.",
+  "image": "/tempImg.jpg",
+  "tags": ["Node.js", "Express", "TypeScript", "MongoDB", "Mongoose", "JWT", "REST API", "Redis", "Pino", "Cloudinary", "Middleware"],
+  "liveUrl": "#",
+  "githubUrl": "https://github.com/NayimWd/nayimwd-Unity_Sports_Club_Api",
+  "category": "Backend Development",
+  "year": "2025",
+  "duration": "2 month",
+  "client": "Personal Project",
+  "features": [
+    "100+ RESTful API endpoints across users, teams, players, tournaments, matches, venues, and blogs",
+    "18 fully designed and interconnected Mongoose data models with ERD documentation",
+    "Role-based access control — Admin, Manager, Player, Umpire — with JWT and bcrypt",
+    "MongoDB transactions with rollback for data integrity across related operations",
+    "Middleware-based Redis caching for optimized repeated data fetching",
+    "Optimized queries using .lean(), field selection, and .exists() for performance",
+    "Structured logging with Pino and API timeout handling for production reliability",
+    "File uploads via Multer and Cloudinary with secure access control",
+    "Feature-based modular routing for scalable and maintainable architecture",
+    "Project flow and ERD diagram documenting system structure and data relationships"
+  ],
+  "challenges": [
+    "Requirements analysis and problem finding before writing a single line of code",
+    "Designing a normalized ERD with 18 models and complex cross-feature relationships",
+    "Implementing MongoDB transactions and rollback for multi-step operations",
+    "Setting up middleware-based Redis caching without over-engineering",
+    "Solving CORS issues in deployment environment",
+    "Balancing query performance with .lean(), .exists(), and field projection at scale",
+    "Structuring a large backend cleanly with feature-based routing and reusable middleware"
+  ],
+  "learnings": [
+    "Requirements analysis, problem scoping, and planning before implementation",
+    "Database schema design with ERD, normalization, and relationship mapping",
+    "Query optimization — .lean(), field selection, .exists(), and aggregation",
+    "MongoDB transactions with rollback for atomic multi-document operations",
+    "Middleware-based Redis caching (moderate level) for performance",
+    "Structured production logging with Pino",
+    "API timeout handling and error middleware for reliability",
+    "Feature-based modular routing for large-scale Express apps",
+    "Role-based auth with JWT and bcrypt across multiple user types",
+    "Debugging and solving real deployment issues like CORS",
+    "Documenting systems with ERD diagrams and project flow structures"
+  ],
+  "technologies": {
+    "Backend": ["Node.js", "Express", "TypeScript", "MongoDB", "Mongoose"],
+    "Authentication": ["JWT", "bcrypt"],
+    "Caching": ["Redis"],
+    "Logging": ["Pino"],
+    "File Uploads": ["Multer", "Cloudinary"],
+    "API Testing": ["Postman", "Swagger/OpenAPI"],
+    "Documentation": ["ERD Diagram", "Project Flow Structure"],
+    "Deployment": ["Vercel", "GitHub"]
+  }
+},
     {
       "id": "3",
       "title": "Unity Arena",
@@ -95,8 +127,8 @@
       "liveUrl": "#",
       "githubUrl": "#",
       "category": "Frontend / Web Development",
-      "year": "2025",
-      "duration": "1 month",
+      "year": "2026",
+      "duration": "7 days",
       "client": "Personal Project",
       "features": [
         "Dynamic display of tournaments, matches, and upcoming events",
