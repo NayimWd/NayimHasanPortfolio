@@ -9,20 +9,43 @@ import NavMenu from "@/components/ui/NavMenu";
 
 export const dynamic = "force-static";
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Nayim Hasan",
+  alternateName: ["Naim Hasan"],
+  url: "https://nayim-hasan-portfolio.vercel.app",
+  jobTitle: "MERN Stack Developer",
+  description:
+    "Frontend-focused MERN Stack Developer building scalable UI and maintainable applications.",
+  sameAs: [
+    "https://github.com/NayimWd",
+    "https://www.linkedin.com/in/nayim-hasan",
+  ],
+};
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-         <NavMenu/>
-          <Hero/>
-          <Grid/>
-          <Projects/>
-          <Experiences/>
-          <Skills/>
-          <BlogSection/>
-          <Contact/>
-      </div>
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personSchema),
+        }}
+      />
+
+      <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+        <div className="max-w-7xl w-full">
+          <NavMenu />
+          <Hero />
+          <Grid />
+          <Projects />
+          <Experiences />
+          <Skills />
+          <BlogSection />
+          <Contact />
+        </div>
+      </main>
+    </>
   );
 }

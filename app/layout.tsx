@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   title: "Nayim Hasan — MERN Developer",
   description:
     "Frontend-focused MERN Developer building scalable UI, clean architecture and maintainable code.",
+    keywords: [
+  "Nayim Hasan",
+  "Naim Hasan",
+  "Nayim Hasan developer",
+  "MERN Stack Developer",
+  "Next.js Developer",
+],
   openGraph: {
     type: "website",
     locale: "en_US",
