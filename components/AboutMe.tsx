@@ -1,4 +1,3 @@
-import React from 'react'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { Button } from './MovingBorders'
 

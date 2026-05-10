@@ -5,8 +5,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { Copy } from "lucide-react";
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import animationData from "@/data/confetti.json";
+const Confetti = dynamic(() => import("./Confetti"));
 import MagicButton from "../MagicButton";
 const GlobeDemo = dynamic(() => import("./Globe").then(m => m.GlobeDemo), {
   ssr: false,
@@ -35,6 +34,8 @@ export const BentoGrid = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
+
+
   return (
     <div
       className={cn(
@@ -169,14 +170,8 @@ export const BentoGridItem = ({
                 className={`absolute -bottom-5 right-0 ${copied ? "" : "block"
                   }`}
               >
-                {copied && (
-                  <Lottie
-                    animationData={animationData}
-                    loop={false}
-                    autoplay={true}
-                    style={{ height: 200, width: 400 }}
-                  />
-                )}
+                {copied && <Confetti />
+                }
               </div>
 
               <MagicButton

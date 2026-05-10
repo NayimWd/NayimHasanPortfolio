@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("../grid/GridGlobe").then((m) => m.World), {
