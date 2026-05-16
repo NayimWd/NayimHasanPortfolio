@@ -34,6 +34,7 @@ const ProjectCard = ({ image, title, description, technologies, liveUrl, details
              (max-width: 768px) 50vw, 
              33vw"
           priority
+          
         />
       </div>
 
